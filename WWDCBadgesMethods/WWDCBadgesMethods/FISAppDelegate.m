@@ -12,11 +12,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//      insert code here...
-    
     return YES;
 }
 
-//      insert methods here
+//define methods here
 
 @end
