@@ -5,8 +5,6 @@
 
 # Badges and Schedules
 
-### Skills: blocks, loops, methods
-
 ## Instructions
 
 In this lab you'll be using methods to iterate through an array and return output in different ways.
