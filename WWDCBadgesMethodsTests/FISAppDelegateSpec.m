@@ -17,41 +17,56 @@ SpecBegin(FISAppDelegate)
 
 describe(@"FISAppDelegate", ^{
     __block FISAppDelegate *appDelegate;
-    __block NSArray *attendees;
+    __block NSArray *speakers;
+    __block NSArray *badges;
+    __block NSArray *roomAssignments;
     
-    beforeAll(^{
+    beforeEach(^{
         appDelegate = [[FISAppDelegate alloc] init];
-        attendees = @[@"Edsger", @"Ada", @"Charles", @"Alan", @"Grace", @"Linus", @"Wozniak"];
+        
+        speakers = @[ @"Adele Goldberg",
+                      @"Edsger Dijkstra",
+                      @"Joan Clarke",
+                      @"Clarence Ellis",
+                      @"Margaret Hamilton",
+                      @"George Boole",
+                      @"Tim Berners-Lee",
+                      @"Jean Bartik"          ];
+        
+        badges = @[ @"Hello, my name is Adele Goldberg.",
+                    @"Hello, my name is Edsger Dijkstra.",
+                    @"Hello, my name is Joan Clarke.",
+                    @"Hello, my name is Clarence Ellis.",
+                    @"Hello, my name is Margaret Hamilton.",
+                    @"Hello, my name is George Boole.",
+                    @"Hello, my name is Tim Berners-Lee.",
+                    @"Hello, my name is Jean Bartik."        ];
+        
+        roomAssignments = @[ @"Welcome, Adele Goldberg! You'll be in dressing room 1.",
+                             @"Welcome, Edsger Dijkstra! You'll be in dressing room 2.",
+                             @"Welcome, Joan Clarke! You'll be in dressing room 3.",
+                             @"Welcome, Clarence Ellis! You'll be in dressing room 4.",
+                             @"Welcome, Margaret Hamilton! You'll be in dressing room 5.",
+                             @"Welcome, George Boole! You'll be in dressing room 6.",
+                             @"Welcome, Tim Berners-Lee! You'll be in dressing room 7.",
+                             @"Welcome, Jean Bartik! You'll be in dressing room 8."  ];
     });
     
     describe(@"badgeMaker", ^{
         it(@"should return a formatted badge", ^{
-            expect([appDelegate badgeMaker:@"Herbert"]).to.equal(@"Hello, my name is Herbert.");
+            expect([appDelegate makeBadgeForSpeaker:@"Inigo Montoya"]).to.equal(@"Hello, my name is Inigo Montoya.");
         });
     });
     
     describe(@"batchBadgeCreator", ^{
         it(@"should return a list of badge messages",^{
-            expect([appDelegate batchBadgeCreator:attendees]).to.equal(@[@"Hello, my name is Edsger.",
-                                                                         @"Hello, my name is Ada.",
-                                                                         @"Hello, my name is Charles.",
-                                                                         @"Hello, my name is Alan.",
-                                                                         @"Hello, my name is Grace.",
-                                                                         @"Hello, my name is Linus.",
-                                                                         @"Hello, my name is Wozniak."
-                                                                         ]);
+            expect([appDelegate makeAllBadgesForSpeakers:speakers]).to.equal(badges);
         });
     });
     
     describe(@"assignRooms", ^{
         it(@"should return a list of welcome messages and room assignments",^{
-            expect([appDelegate assignRooms:attendees]).to.equal(@[@"Hello, Edsger! You'll be assigned to room 1!",
-                                                                   @"Hello, Ada! You'll be assigned to room 2!",
-                                                                   @"Hello, Charles! You'll be assigned to room 3!",
-                                                                   @"Hello, Alan! You'll be assigned to room 4!",
-                                                                   @"Hello, Grace! You'll be assigned to room 5!",
-                                                                   @"Hello, Linus! You'll be assigned to room 6!",
-                                                                   @"Hello, Wozniak! You'll be assigned to room 7!"]);
+            expect([appDelegate greetAndAssignRoomsToSpeakers:speakers]).to.equal(roomAssignments);
         });
     });
     

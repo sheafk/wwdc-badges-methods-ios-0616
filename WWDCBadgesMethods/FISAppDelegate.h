@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-//declare methods here:
+/*
+ 
+ * Declare your custom methods in this space. Don't forget to end the statements with semicolons ";" !
+ 
+ */
 
 @end

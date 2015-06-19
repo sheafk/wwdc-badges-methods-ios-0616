@@ -12,9 +12,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    /*
+     
+     * Call your methods within this method body.
+     
+     */
+    
     return YES;
 }
 
-//define methods here
+/*
+ 
+ * Define your methods between application:didFinishLaunchingWithOptions and the @end marker
+ 
+ */
 
 @end
