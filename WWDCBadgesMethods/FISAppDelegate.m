@@ -10,13 +10,7 @@
 
 @implementation FISAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    /*
-     
-     * Call your methods within this method body.
-     
-     */
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     return YES;
 }
