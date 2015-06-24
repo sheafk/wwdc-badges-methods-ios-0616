@@ -10,11 +10,15 @@
 
 @implementation FISAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     return YES;
 }
 
-//define methods here
+/*
+ 
+ * Define your methods between application:didFinishLaunchingWithOptions and the @end marker
+ 
+ */
 
 @end
