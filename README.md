@@ -1,39 +1,43 @@
----
-  tags: arrays, iteration, methods, todo
-  languages: objc
----
+# WWDC 2.0
 
-# Badges and Schedules
+## Objectives
+
+1. Write custom methods to solve a few simple problems.
+2. Call your methods to get the results that you need.
+3. Run
+
+## Premise
+
+You did such a great job last year at the [Apple Worldwide Developers Conference](https://developer.apple.com/wwdc/) that they've asked for you back—and now they want you to handle a few more tasks as well. It's more work than you could possible handle by yourself given the time frame, so you'll need to figure out how to pass off the intructions by creating some methods!
+
+The speaker list is new this year, but it boasts a similarly astounding group.
+
+* [Adele Goldberg](https://en.wikipedia.org/wiki/Adele_Goldberg_(computer_scientist))
+* [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
+* [Joan Clarke](https://en.wikipedia.org/wiki/Joan_Clarke)
+* [Clarence Ellis](https://en.wikipedia.org/wiki/Clarence_Ellis_(computer_scientist))
+* [Margaret Hamilton](https://en.wikipedia.org/wiki/Margaret_Hamilton_(scientist))
+* [George Boole](https://en.wikipedia.org/?title=George_Boole)
+* [Tim Berners-Lee](https://en.wikipedia.org/?title=Tim_Berners-Lee)
+* [Jean Bartik](https://en.wikipedia.org/wiki/Jean_Bartik)
+
+In addition to the name tags, the conference manager also wants you to print a personalized greeting for each speaker to inform each of them of their dressing room assignment back stage.
 
 ## Instructions
 
-In this lab you'll be using methods to iterate through an array and return output in different ways.
-This time we'll be working below the following method in `FISAppDelegate`.
+1. Open the `*.xcworkspace` and read the unit tests in `AppDelegateSpec`. Try to understand what each test is expecting to happen. (*Do not copy/paste the expected arrays from the tests into your method body. These are matchers for what your methods should produce programmatically at run time.*)
 
-```objc
--(BOOL)application:(UIApplication *)application
-  didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-```
+2. Navigate to the `AppDelegate.h` header file. Declare three (`-`) instance methods within the `@interface`:
+  * `makeBadgeForSpeaker:` that accepts one `NSString` argument named `speaker` and returns an `NSString`
+  * `makeAllBadgesForSpeakers:` that accepts one `NSArray` argument named `speakers` and returns an `NSMutableArray`
+  * `greetAndAssignRoomsToSpeakers:` that accepts on `NSArray` argument and named `speakers` and returns an `NSMutableArray`
 
-Background: You're helping out at the [Apple Worldwide Developers Conference](https://developer.apple.com/wwdc/) conference and need to print badges for the speakers. Each badge should say: "Hello, my name is _____." The list of speakers for your conference has been finalized. Your conference speakers are: `@"Edsger", @"Ada", @"Charles", @"Alan", @"Grace", @"Linus" and @"Wozniak".` How you scored these luminaries is beyond me, but way to go! Now you'll want to get their badges printed. 
+2. Navigate to the `AppDelegate.m` implementation file. Using autocomplete, fill out the names of each method and define them to return `nil` (these minimum definitions are required to get the test build to succeed). Run the tests (`⌘``U`) to make sure that the build succeeds but the tests initially fail.
 
-  1. In `FISAppDelegate.h`, declare three methods:
+3. Redefine `makeBadgeForSpeaker:` to return an interpolated string that includes the speaker's name submitted through the argument, in the manner of `Hello, my name is <#speaker#>.`. Run the test that checks this method and tweak your method until it the test passes.
 
-    ```objc
-    -(NSString *)badgeMaker:(NSString *)attendee;
-    -(NSArray *)batchBadgeCreator:(NSArray *)attendees;
-    -(NSArray *)assignRooms:(NSArray *)attendees;
-    ``` 
-  2. Define these 3 methods in `FISAppDelegate.m`, under
-     `application:didFinishLaunchingWithOptions`.
-     1. For the `badgeMaker` method, take a parameter `attendee` and return an `NSString` that says "Hello, my name is ___.".
-     2. For the `batchBadgeMaker` method, take a parameter `attendees` and
-        return an array of speaker badges, each of which will say "Hello, my
-        name is ___."
-     3. For the `assignRooms` method, take a parameter `attendees` and return
-        an array of very polite room assignments, each of which will say
-        "Hello, ___! You'll be assigned to room ___!", where room ___ is a
-        number from 1-7, in the order that the names appear in the array. 
+4. Redefine `makeAllBadgesForSpeakers:` to call `makeBadgeForSpeaker:` on each string in the `speakers` array submitted through the `NSArray` argument; capture its return string into a new `NSMutableArray` declared within the method. **Hint:** *Use a* `for` *loop to iterate over the argument array and add the result of each* `makeBadgeForSpeaker:` *method call to the mutable array.* Return the mutable array. Then, run the test for this method and tweak your method body until the test passes.
 
-  3. Have fun and make the tests pass... they want you to succeed, so pay attention to what they're
-     telling you when they fail :) 
+5. Redefine the `greetAndAssignRoomsToSpeakers:` method to iterate over the `speakers` argument array and create an interpolated string with each speaker's name and their dressing room number (which range from 1 through 8). The interpolated string should read: `Welcome, <#speaker#>! You'll be in dressing room <#roomNumber#>.` Add each string to a mutable array. Return the mutable array, then run the test and tweak your method body until the test passes.
+
+
