@@ -4,7 +4,7 @@
 
 1. Write custom methods to solve a few simple problems.
 2. Call your methods to get the results that you need.
-3. Run
+3. Run the tests to check your work.
 
 ## Premise
 
