@@ -25,14 +25,14 @@ In addition to the name tags, the conference manager also wants you to print a p
 
 ## Instructions
 
-1. Open the `*.xcworkspace` and read the unit tests in `AppDelegateSpec`. Try to understand what each test is expecting to happen. (*Do not copy/paste the expected arrays from the tests into your method body. These are matchers for what your methods should produce programmatically at run time.*)
+1. Open the `*.xcworkspace` and read the unit tests in `AppDelegateSpec`. Try to understand what each test is expecting to happen. (*Do not copy/paste the expected arrays from the tests into your method body. These are matchers for what your methods should produce programmatically at run time.*) You'll notice that Xcode generates three errors that show up in the Issue Navigator like this: ![](https://curriculum-content.s3.amazonaws.com/ios/wwdc-badges-methods/missingMethodErrors.png) This is normal and it just means that Xcode can't find the methods that are called in the tests—but of course it can't, you haven't written them yet!
 
 2. Navigate to the `AppDelegate.h` header file. Declare three (`-`) instance methods within the `@interface`:
   * `makeBadgeForSpeaker:` that accepts one `NSString` argument named `speaker` and returns an `NSString`
   * `makeAllBadgesForSpeakers:` that accepts one `NSArray` argument named `speakers` and returns an `NSMutableArray`
   * `greetAndAssignRoomsToSpeakers:` that accepts on `NSArray` argument and named `speakers` and returns an `NSMutableArray`
 
-2. Navigate to the `AppDelegate.m` implementation file. Using autocomplete, fill out the names of each method and define them to return `nil` (these minimum definitions are required to get the test build to succeed). Run the tests (`⌘``U`) to make sure that the build succeeds but the tests initially fail.
+2. Navigate to the `AppDelegate.m` implementation file. Using autocomplete, fill out the names of each method and define them to return `nil` (these minimum definitions are required to get those three errors to disappear and the test build to succeed). Run the tests (`⌘``U`) to make sure that the build succeeds but that the tests initially fail.
 
 3. Redefine `makeBadgeForSpeaker:` to return an interpolated string that includes the speaker's name submitted through the argument, in the manner of `Hello, my name is <#speaker#>.`. Run the test that checks this method and tweak your method until it the test passes.
 
