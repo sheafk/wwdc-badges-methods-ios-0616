@@ -25,7 +25,8 @@ In addition to the name tags, the conference manager also wants you to print a p
 
 ## Instructions
 
-1. Open the `*.xcworkspace` and read the unit tests in `AppDelegateSpec`. Try to understand what each test is expecting to happen. (*Do not copy/paste the expected arrays from the tests into your method body. These are matchers for what your methods should produce programmatically at run time.*) You'll notice that Xcode generates three errors that show up in the Issue Navigator like this: ![](https://curriculum-content.s3.amazonaws.com/ios/wwdc-badges-methods/missingMethodErrors.png) This is normal and it just means that Xcode can't find the methods that are called in the tests—but of course it can't, you haven't written them yet!
+1. Open the `*.xcworkspace` and read the unit tests in `AppDelegateSpec`. Try to understand what each test is expecting to happen. (*Do not copy/paste the expected arrays from the tests into your method body. These are matchers for what your methods should produce programmatically at run time.*) You'll notice that Xcode generates three errors that show up in the Issue Navigator like this:   ![](https://curriculum-content.s3.amazonaws.com/ios/wwdc-badges-methods/missingMethodErrors.png)  
+This is normal and it just means that Xcode can't find the methods that are called in the tests—but of course it can't, you haven't written them yet!
 
 2. Navigate to the `AppDelegate.h` header file. Declare three (`-`) instance methods within the `@interface`:
   * `makeBadgeForSpeaker:` that accepts one `NSString` argument named `speaker` and returns an `NSString`
