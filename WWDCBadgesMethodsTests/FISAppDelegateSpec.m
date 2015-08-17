@@ -52,19 +52,19 @@ describe(@"FISAppDelegate", ^{
     
     describe(@"makeBadgeForSpeaker", ^{
         it(@"should return a formatted badge", ^{
-            expect([appDelegate makeBadgeForSpeaker:@"Inigo Montoya"]).to.equal(@"Hello, my name is Inigo Montoya.");
+            expect([appDelegate badgeForSpeaker:@"Inigo Montoya"]).to.equal(@"Hello, my name is Inigo Montoya.");
         });
     });
     
     describe(@"makeAllBadgesForSpeakers", ^{
         it(@"should return a list of badge messages",^{
-            expect([appDelegate makeAllBadgesForSpeakers:speakers]).to.equal(badges);
+            expect([appDelegate badgesForSpeakers:speakers]).to.equal(badges);
         });
     });
     
     describe(@"greetAndAssignRoomsToSpeakers", ^{
         it(@"should return a list of welcome messages and room assignments",^{
-            expect([appDelegate greetAndAssignRoomsToSpeakers:speakers]).to.equal(roomAssignments);
+            expect([appDelegate greeetingsAndRoomAssignmentsForSpeakers:speakers]).to.equal(roomAssignments);
         });
     });
     
