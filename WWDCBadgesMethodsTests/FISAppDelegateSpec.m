@@ -50,19 +50,19 @@ describe(@"FISAppDelegate", ^{
                              @"Welcome, Jean Bartik! You'll be in dressing room 8."  ];
     });
     
-    describe(@"makeBadgeForSpeaker", ^{
+    describe(@"badgeForSpeaker:", ^{
         it(@"should return a formatted badge", ^{
             expect([appDelegate badgeForSpeaker:@"Inigo Montoya"]).to.equal(@"Hello, my name is Inigo Montoya.");
         });
     });
     
-    describe(@"makeAllBadgesForSpeakers", ^{
+    describe(@"badgesForSpeakers:", ^{
         it(@"should return a list of badge messages",^{
             expect([appDelegate badgesForSpeakers:speakers]).to.equal(badges);
         });
     });
     
-    describe(@"greetAndAssignRoomsToSpeakers", ^{
+    describe(@"greetingsAndRoomAssignmentsForSpeakers:", ^{
         it(@"should return a list of welcome messages and room assignments",^{
             expect([appDelegate greetingsAndRoomAssignmentsForSpeakers:speakers]).to.equal(roomAssignments);
         });
