@@ -9,7 +9,7 @@
 #import "Specta.h"
 #import "FISAppDelegate.h"
 #define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
+#import "Expecta.h"
 
 SpecBegin(FISAppDelegate)
 
@@ -50,21 +50,21 @@ describe(@"FISAppDelegate", ^{
                              @"Welcome, Jean Bartik! You'll be in dressing room 8."  ];
     });
     
-    describe(@"badgeForSpeaker", ^{
+    describe(@"makeBadgeForSpeaker", ^{
         it(@"should return a formatted badge", ^{
             expect([appDelegate badgeForSpeaker:@"Inigo Montoya"]).to.equal(@"Hello, my name is Inigo Montoya.");
         });
     });
     
-    describe(@"badgesForSpeakers", ^{
+    describe(@"makeAllBadgesForSpeakers", ^{
         it(@"should return a list of badge messages",^{
             expect([appDelegate badgesForSpeakers:speakers]).to.equal(badges);
         });
     });
     
-    describe(@"greeetingsAndRoomAssignmentsForSpeakers", ^{
+    describe(@"greetAndAssignRoomsToSpeakers", ^{
         it(@"should return a list of welcome messages and room assignments",^{
-            expect([appDelegate greeetingsAndRoomAssignmentsForSpeakers:speakers]).to.equal(roomAssignments);
+            expect([appDelegate greetingsAndRoomAssignmentsForSpeakers:speakers]).to.equal(roomAssignments);
         });
     });
     
