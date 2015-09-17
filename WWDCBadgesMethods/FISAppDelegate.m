@@ -40,7 +40,7 @@
     return allBadges;
 }
 
-- (NSArray *)greeetingsAndRoomAssignmentsForSpeakers:(NSArray *)speakers {
+- (NSArray *)greetingsAndRoomAssignmentsForSpeakers:(NSArray *)speakers {
     
     NSMutableArray *allGreetings = [[NSMutableArray alloc] init];
     

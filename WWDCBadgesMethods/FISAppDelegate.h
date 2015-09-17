@@ -20,6 +20,6 @@
 
 - (NSString *)badgeForSpeaker:(NSString *)speaker;
 - (NSMutableArray *)badgesForSpeakers:(NSArray *)speakers;
-- (NSMutableArray *)greeetingsAndRoomAssignmentsForSpeakers:(NSArray *)speakers;
+- (NSMutableArray *)greetingsAndRoomAssignmentsForSpeakers:(NSArray *)speakers;
 
 @end
