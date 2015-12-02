@@ -44,3 +44,5 @@ This is normal and it just means that Xcode can't find the methods that are call
 6. Redefine the `greetingsAndRoomAssignmentsForSpeakers:` method to iterate over the `speakers` argument array and create an interpolated string with each speaker's name and their dressing room number (which range from 1 through 8). The interpolated string should read: `Welcome, <#speaker#>! You'll be in dressing room <#roomNumber#>.` Add each string to a mutable array. Return the mutable array, then run the test and tweak your method body until the test passes.
 
 
+
+<a href='https://learn.co/lessons/wwdc-badges-methods' data-visibility='hidden'>View this lesson on Learn.co</a>
