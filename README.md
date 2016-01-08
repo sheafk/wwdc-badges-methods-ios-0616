@@ -39,7 +39,7 @@ This is normal and it just means that Xcode can't find the methods that are call
 
 5. Redefine `badgesForSpeakers:` to return a mutable array of eight (8) interpolated strings that each read `Hello, my name is <#speaker#>.`, one string for each speaker that will be at the conference. Run the test for this method and tweak your method body until the test passes.  
 **Hint:** *Use a* `for` *loop to iterate over the argument array and, upon each iteration of the loop, add to your mutable array the interpolated string for that speaker's badge.*  
-**Advanced:** *Utilize your your* `badgeForSpeaker:` *method by calling it on* `self` *and supplying it with an argument string pulled from the* `speakers` *array.*
+**Advanced:** *Utilize your* `badgeForSpeaker:` *method by calling it on* `self` *and supplying it with an argument string pulled from the* `speakers` *array.*
 
 6. Redefine the `greetingsAndRoomAssignmentsForSpeakers:` method to iterate over the `speakers` argument array and create an interpolated string with each speaker's name and their dressing room number (which range from 1 through 8). The interpolated string should read: `Welcome, <#speaker#>! You'll be in dressing room <#roomNumber#>.` Add each string to a mutable array. Return the mutable array, then run the test and tweak your method body until the test passes.
 
