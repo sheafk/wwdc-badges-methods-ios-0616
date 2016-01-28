@@ -45,4 +45,4 @@ This is normal and it just means that Xcode can't find the methods that are call
 
 
 
-<a href='https://learn.co/lessons/wwdc-badges-methods' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/wwdc-badges-methods' title='WWDC Badges With Methods'>WWDC Badges With Methods</a> on Learn.co and start learning to code for free.</p>
