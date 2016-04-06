@@ -35,7 +35,7 @@ This is normal and it just means that Xcode can't find the methods that are call
 
 3. Navigate to the `AppDelegate.m` implementation file. Using autocomplete, fill out the names of each method and define them to return `nil` (these minimum definitions are required to get those three errors to disappear and the test build to succeed). Run the tests (`⌘``U`) to make sure that the build succeeds but that the tests initially fail.
 
-4. Redefine `badgeForSpeaker:` to return an interpolated string that includes the speaker's name submitted through the argument, in the manner of `Hello, my name is <#speaker#>.`. Run the test that checks this method and tweak your method until it the test passes.
+4. Redefine `badgeForSpeaker:` to return an interpolated string that includes the speaker's name submitted through the argument, in the manner of `Hello, my name is <#speaker#>.`. Run the test that checks this method and tweak your method until the test passes.
 
 5. Redefine `badgesForSpeakers:` to return a mutable array of eight (8) interpolated strings that each read `Hello, my name is <#speaker#>.`, one string for each speaker that will be at the conference. Run the test for this method and tweak your method body until the test passes.  
 **Hint:** *Use a* `for` *loop to iterate over the argument array and, upon each iteration of the loop, add to your mutable array the interpolated string for that speaker's badge.*  
@@ -46,3 +46,5 @@ This is normal and it just means that Xcode can't find the methods that are call
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/wwdc-badges-methods' title='WWDC Badges With Methods'>WWDC Badges With Methods</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/wwdc-badges-methods'>WWDC Badges With Methods</a> on Learn.co and start learning to code for free.</p>
