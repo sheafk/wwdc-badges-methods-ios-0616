@@ -31,7 +31,7 @@ This is normal and it just means that Xcode can't find the methods that are call
 2. Navigate to the `AppDelegate.h` header file. Declare three instance (`-`) methods within the `@interface`:
   * `badgeForSpeaker:` that accepts one `NSString` argument named `speaker` and returns an `NSString`
   * `badgesForSpeakers:` that accepts one `NSArray` argument named `speakers` and returns an `NSArray`
-  * `greetingsAndRoomAssignmentsForSpeakers:` that accepts on `NSArray` argument named `speakers` and returns an `NSArray`
+  * `greetingsAndRoomAssignmentsForSpeakers:` that accepts one `NSArray` argument named `speakers` and returns an `NSArray`
 
 3. Navigate to the `AppDelegate.m` implementation file. Using autocomplete, fill out the names of each method and define them to return `nil` (these minimum definitions are required to get those three errors to disappear and the test build to succeed). Run the tests (`⌘``U`) to make sure that the build succeeds but that the tests initially fail.
 
@@ -46,3 +46,5 @@ This is normal and it just means that Xcode can't find the methods that are call
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/wwdc-badges-methods' title='WWDC Badges With Methods'>WWDC Badges With Methods</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/wwdc-badges-methods'>WWDC Badges With Methods</a> on Learn.co and start learning to code for free.</p>
