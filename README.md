@@ -31,16 +31,20 @@ This is normal and it just means that Xcode can't find the methods that are call
 2. Navigate to the `AppDelegate.h` header file. Declare three instance (`-`) methods within the `@interface`:
   * `badgeForSpeaker:` that accepts one `NSString` argument named `speaker` and returns an `NSString`
   * `badgesForSpeakers:` that accepts one `NSArray` argument named `speakers` and returns an `NSArray`
-  * `greetingsAndRoomAssignmentsForSpeakers:` that accepts on `NSArray` argument named `speakers` and returns an `NSArray`
+  * `greetingsAndRoomAssignmentsForSpeakers:` that accepts one `NSArray` argument named `speakers` and returns an `NSArray`
 
 3. Navigate to the `AppDelegate.m` implementation file. Using autocomplete, fill out the names of each method and define them to return `nil` (these minimum definitions are required to get those three errors to disappear and the test build to succeed). Run the tests (`⌘``U`) to make sure that the build succeeds but that the tests initially fail.
 
-4. Redefine `badgeForSpeaker:` to return an interpolated string that includes the speaker's name submitted through the argument, in the manner of `Hello, my name is <#speaker#>.`. Run the test that checks this method and tweak your method until it the test passes.
+4. Redefine `badgeForSpeaker:` to return an interpolated string that includes the speaker's name submitted through the argument, in the manner of `Hello, my name is <#speaker#>.`. Run the test that checks this method and tweak your method until the test passes.
 
 5. Redefine `badgesForSpeakers:` to return a mutable array of eight (8) interpolated strings that each read `Hello, my name is <#speaker#>.`, one string for each speaker that will be at the conference. Run the test for this method and tweak your method body until the test passes.  
 **Hint:** *Use a* `for` *loop to iterate over the argument array and, upon each iteration of the loop, add to your mutable array the interpolated string for that speaker's badge.*  
-**Advanced:** *Utilize your your* `badgeForSpeaker:` *method by calling it on* `self` *and supplying it with an argument string pulled from the* `speakers` *array.*
+**Advanced:** *Utilize your* `badgeForSpeaker:` *method by calling it on* `self` *and supplying it with an argument string pulled from the* `speakers` *array.*
 
 6. Redefine the `greetingsAndRoomAssignmentsForSpeakers:` method to iterate over the `speakers` argument array and create an interpolated string with each speaker's name and their dressing room number (which range from 1 through 8). The interpolated string should read: `Welcome, <#speaker#>! You'll be in dressing room <#roomNumber#>.` Add each string to a mutable array. Return the mutable array, then run the test and tweak your method body until the test passes.
 
 
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/wwdc-badges-methods' title='WWDC Badges With Methods'>WWDC Badges With Methods</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/wwdc-badges-methods'>WWDC Badges With Methods</a> on Learn.co and start learning to code for free.</p>
